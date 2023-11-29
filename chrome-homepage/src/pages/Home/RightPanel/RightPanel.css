@@ -1,0 +1,29 @@
+.right-panel {
+    width: var(--right-panel-width);
+    position: relative;
+    height: 100%;
+    background-color: var(--right-panel-color-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    backdrop-filter: blur(var(--right-panel-blur));
+}
+
+.right-panel__google-search-bar {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+.right-panel {
+    transform: translateX(700px);
+    animation: appear 2s forwards;
+}
+
+@keyframes right-panel-appear {
+    to {
+        transform: translateX(0);
+    }
+}

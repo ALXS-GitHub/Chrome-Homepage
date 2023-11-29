@@ -1,0 +1,33 @@
+.link-box {
+    width: var(--link-box-width);
+    height: var(--link-box-width);
+    background-color: var(--link-box-color);
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.link-box:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.link-box__icon {
+    width: calc(var(--link-box-width) - 50%);
+    height: calc(var(--link-box-width) - 50%);
+    margin-bottom: 10px;
+}
+
+.link-box__icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.link-box__name {
+    font-size: 18px;
+    text-align: center;
+}

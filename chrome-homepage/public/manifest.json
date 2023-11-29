@@ -1,0 +1,27 @@
+{
+  "short_name": "Chrome Homepage",
+  "name": "Chrome Homepage",
+  "description": "This is my custom Chrome Homepage",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Chrome Homepage"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tab"
+  ],
+  "icons": {
+    "16": "logo388.png",
+    "48": "logo388.png",
+    "128": "logo388.png"
+  },
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

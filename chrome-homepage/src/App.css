@@ -1,0 +1,14 @@
+:root {
+  --left-panel-color: #CCCCCC;
+  --left-panel-color-transparent: #CCCCCC66;
+  --right-panel-color: #000000;
+  --right-panel-color-transparent: #00000066;
+  --right-panel-width: 33%;
+  --left-panel-blur: 3px;
+  --right-panel-blur: 5px;
+  --google-search-bar-width: 80%;
+  --google-search-bar-color: #CCCCCC66;
+  --google-search-bar-color-hover: #CCCCCC88;
+  --link-box-width: 150px;
+  --link-box-color: #FFFFFF;
+}
