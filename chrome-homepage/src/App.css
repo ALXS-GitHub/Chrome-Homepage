@@ -3,7 +3,8 @@
   --left-panel-color-transparent: #CCCCCC66;
   --right-panel-color: #000000;
   --right-panel-color-transparent: #00000066;
-  --right-panel-width: 33%;
+  --right-panel-width: 600px;
+  --right-panel-side-padding: 20px;
   --left-panel-blur: 3px;
   --right-panel-blur: 5px;
   --google-search-bar-width: 80%;
@@ -11,4 +12,12 @@
   --google-search-bar-color-hover: #CCCCCC88;
   --link-box-width: 150px;
   --link-box-color: #FFFFFF;
+  --settings-panel-width: var(--right-panel-width);
+  --settings-panel-side-padding: var(--right-panel-side-padding);
+  --settings-background-color: #FFFFFF;
+  --settings-color: #000000;
+  --button-background-color: linear-gradient(73deg, #0073ff, #00d2ff);
+  --button-color: #FFFFFF;
+  --button-background-color-hover: #0073ff;
+  --settings-section-delimiter-color: #00000080;
 }

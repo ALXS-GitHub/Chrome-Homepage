@@ -10,3 +10,53 @@
     position: relative;
     overflow-x: hidden;
 }
+
+.home__settings-button {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.home__settings-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings-transition-enter {
+    transform: translateX(var(--settings-panel-width));
+}
+
+.settings-transition-enter-active {
+    transform: translateX(0);
+    transition: transform 2s;
+}
+
+.settings-transition-exit {
+    transform: translateX(0);
+}
+
+.settings-transition-exit-active {
+    transform: translateX(calc(var(--settings-panel-width) + var(--settings-panel-side-padding) * 2));
+    transition: transform 2s;
+}
+
+.settings-button-transition-enter {
+    transform: rotate(0deg);
+}
+
+.settings-button-transition-enter-active {
+    transform: rotate(-360deg);
+    transition: transform 2000ms;
+}
+
+.settings-button-transition-exit {
+    transform: rotate(-360deg);
+}
+
+.settings-button-transition-exit-active {
+    transform: rotate(0deg);
+    transition: transform 2000ms;
+}

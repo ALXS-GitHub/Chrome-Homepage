@@ -1,0 +1,13 @@
+.button {
+    display: inline-block;
+    border-radius: 5px;
+    background-image: var(--button-background-color);
+    color: var(--button-color);
+    font-size: 1.5rem;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    -webkit-tap-highlight-color: transparent;
+    backdrop-filter: blur(5px);
+}

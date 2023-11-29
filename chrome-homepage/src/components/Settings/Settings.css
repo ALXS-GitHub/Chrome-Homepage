@@ -1,0 +1,61 @@
+.settings {
+    width: var(--settings-panel-width);
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--settings-background-color);
+    color: var(--settings-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--settings-panel-side-padding);
+}
+
+.settings-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.settings-container__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.settings-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.settings-section__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-section::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--settings-section-delimiter-color);
+    position: absolute;
+    top: 0;
+}

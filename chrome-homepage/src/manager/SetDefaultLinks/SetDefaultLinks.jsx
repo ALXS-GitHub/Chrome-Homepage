@@ -10,6 +10,8 @@ import DailyRewards from '../../images/linkbox/Daily Rewards.png'
 import MonkeyType from '../../images/linkbox/MonkeyType.png'
 import GoogleDrive from '../../images/linkbox/Google Drive.png'
 
+import { Button } from '../../components'
+
 const defaultLinks = [
     { name: 'GitHub', url: 'https://github.com', img: GitHub },
     { name: 'YouTube', url: 'https://youtube.com', img: YouTube },
@@ -41,7 +43,10 @@ const SetDefaultLinks = () => {
 
     return (
         <div>
-            <button onClick={handleClick}>Set Default Links</button>
+            <Button
+                onClick={handleClick}
+                children={"Set default links"}
+            />
         </div>
     )
 }
