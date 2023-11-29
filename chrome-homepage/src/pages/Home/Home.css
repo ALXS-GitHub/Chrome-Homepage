@@ -26,7 +26,7 @@
 }
 
 .settings-transition-enter {
-    transform: translateX(var(--settings-panel-width));
+    transform: translateX(calc(var(--settings-panel-width) + var(--settings-panel-side-padding) * 2));
 }
 
 .settings-transition-enter-active {

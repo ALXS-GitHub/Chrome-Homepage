@@ -1,5 +1,6 @@
 import React from 'react'
 import { set, get } from 'idb-keyval' // to use IndexedDB more easily
+import { useEffect } from 'react'
 
 import GitHub from '../../images/linkbox/GitHub.png'
 import YouTube from '../../images/linkbox/YouTube.png'
@@ -11,6 +12,8 @@ import MonkeyType from '../../images/linkbox/MonkeyType.png'
 import GoogleDrive from '../../images/linkbox/Google Drive.png'
 
 import { Button } from '../../components'
+
+import { LinksContext } from '../../App'
 
 const defaultLinks = [
     { name: 'GitHub', url: 'https://github.com', img: GitHub },
@@ -25,6 +28,8 @@ const defaultLinks = [
 
 const SetDefaultLinks = () => {
 
+    const { links, setLinks } = React.useContext(LinksContext);
+
     const handleClick = () => {
         const previousLinks = get('links').then(previousLinks => {
             previousLinks = previousLinks || []; // If previousLinks is null or undefined, use an empty array
@@ -36,6 +41,7 @@ const SetDefaultLinks = () => {
                 }
             }
             if (JSON.stringify(newLinks) !== JSON.stringify(previousLinks)) {
+                setLinks(newLinks);
                 set('links', newLinks);
             }
         });

@@ -1,21 +1,21 @@
 import './LeftPanel.css'
 import React from 'react'
-import { get } from 'idb-keyval'
+import { get, set } from 'idb-keyval'
 import { useState, useEffect } from 'react'
 
+import { LinksContext } from '../../../App'
 import { LinkBox } from '../../../components'
-import { SetDefaultLinks } from '../../../manager'
 
 
 const LeftPanel = () => {
 
-    const [links, setLinks] = React.useState([]);
+    const { links, setLinks } = React.useContext(LinksContext)
 
     useEffect(() => {
         get('links').then(links => {
             setLinks(links || [])
         })
-    }, [])
+    }, [setLinks])
 
     console.log(links)
 

@@ -3,11 +3,17 @@ import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import { set, get } from 'idb-keyval' // to use IndexedDB more easily
 
+import { LinksContext } from '../../App'
+
+import { ReactComponent as AddIcon } from '../../icons/check-solid.svg'
+import DefaultImage from '../../images/DefaultImage.png'
+
 const AddLinkBox = () => {
-    const [links, setLinks] = useState([]);
+    const { links, setLinks } = React.useContext(LinksContext);
     const nameRef = useRef();
-    const fileRef = useRef();
+    const imgRef = useRef();
     const urlRef = useRef();
+    const [img, setImg] = useState(null)
 
     // get the links from the database
     useEffect(() => {
@@ -21,11 +27,11 @@ const AddLinkBox = () => {
     const handleUpload = (event) => {
         event.preventDefault();
         const name = nameRef.current.value;
-        const file = fileRef.current.files[0];
+        const file = imgRef.current.files[0];
         const url = urlRef.current.value;
         const reader = new FileReader();
         reader.onloadend = () => {
-            const link = { name, url, img: reader.result };
+            const link = { name, url, img: img || DefaultImage};
             const newLinks = [...links, link];
             setLinks(newLinks);
             set('links', newLinks);
@@ -34,24 +40,37 @@ const AddLinkBox = () => {
         reader.readAsDataURL(file);
     };
 
+    const imgOnClick = (e) => {
+        e.preventDefault()
+        imgRef.current.click()
+    }
+
+    const handleImgChange = (e) => {
+        e.preventDefault()
+        const file = e.target.files[0]
+        const reader = new FileReader()
+        reader.onloadend = () => {
+            setImg(reader.result)
+        }
+        reader.onerror = (error) => console.error(error)
+        reader.readAsDataURL(file)
+    }
+
     return (
         <div className="add-link-box">
-            <form onSubmit={handleUpload}>
-                <input type="text" name="name" ref={nameRef} placeholder="Name" />
-                <input type="file" name="img" ref={fileRef} multiple />
-                <input type="text" name="url" ref={urlRef} placeholder="URL" />
-                <button type="submit">Add</button>
-            </form>
-            {links.map(link => (
-                <div className="link-box">
-                    <div className="link-box__icon">
-                        <img src={link.img} alt={link.name} />
-                    </div>
-                    <div className="link-box__name">
-                        {link.name}
-                    </div>
+            <form className="add-link-box__item" onSubmit={handleUpload}>
+                <div className="add-link-box__item__prop">
+                    <img className="image-modif-hover" src={img || DefaultImage} alt="Default" onClick={imgOnClick} />
+                    <input type="text" ref={nameRef} placeholder="Name" />
+                    <input type="text" ref={urlRef} placeholder="Url" />
+                    <input type="file" ref={imgRef} style={{ display: 'none' }} onChange={handleImgChange} />
                 </div>
-            ))}
+                <div className="add-link-box__item__buttons">
+                    <button className="add-link-box__item__submit" type="submit">
+                        <AddIcon />
+                    </button>
+                </div>
+            </form>
         </div>
     )
 }

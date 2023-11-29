@@ -16,7 +16,7 @@
   --settings-panel-side-padding: var(--right-panel-side-padding);
   --settings-background-color: #FFFFFF;
   --settings-color: #000000;
-  --button-background-color: linear-gradient(73deg, #0073ff, #00d2ff);
+  --button-background-color: linear-gradient(73deg, #4f4f4f, #a9a9a9);
   --button-color: #FFFFFF;
   --button-background-color-hover: #0073ff;
   --settings-section-delimiter-color: #00000080;
