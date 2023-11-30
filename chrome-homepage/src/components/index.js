@@ -4,6 +4,8 @@ import AddLinkBox from './AddLinkBox/AddLinkBox';
 import Settings from './Settings/Settings';
 import Button from './Button/Button';
 import LinkList from './LinkList/LinkList';
+import Background from './Background/Background';
+import Select from './Select/Select';
 
 export {
     GoogleSearchBar,
@@ -11,5 +13,7 @@ export {
     AddLinkBox,
     Settings,
     Button,
-    LinkList
+    LinkList,
+    Background,
+    Select
 }

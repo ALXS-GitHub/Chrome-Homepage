@@ -1,27 +1,77 @@
-.button-3 {
-    display: inline-block;
-    border-radius: 5px;
-    background-image: var(--button-background-color);
-    color: var(--button-color);
-    font-size: 1.5rem;
-    outline: none;
+.button-3, .button-2 {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+        rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
     cursor: pointer;
-    padding: 10px;
-    margin: 5px;
-    -webkit-tap-highlight-color: transparent;
-    backdrop-filter: blur(5px);
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform, opacity;
+    margin: 10px;
+}
+
+.button-3 {
+    font-size: 1.2rem;
+    max-width: 100%;
+    padding: 12px 24px;
+    border-radius: 5rem;
 }
 
 .button-2 {
-    display: inline-block;
-    border-radius: 5px;
-    background-image: var(--button-background-color);
-    color: var(--button-color);
     font-size: 1rem;
+    max-width: 100%;
+    padding: 8px 16px;
+    border-radius: 5rem;
+}
+
+.button-3:hover, .button-2:hover {
+    background: #f6f9fe;
+    color: #174ea6;
+}
+
+.button-3:active, .button-2:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+        0 8px 12px 6px rgb(60 64 67 / 15%);
     outline: none;
-    cursor: pointer;
-    padding: 8px;
-    margin: 5px;
-    -webkit-tap-highlight-color: transparent;
-    backdrop-filter: blur(5px);
+}
+
+.button-3:focus, .button-2:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+.button-3:not(:disabled), .button-2:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+        rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-3:not(:disabled):hover, .button-2:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+        rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-3:not(:disabled):focus, .button-2:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+        rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-3:not(:disabled):active, .button-2:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+        rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-3:disabled, .button-2:disabled {
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+        rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
 }

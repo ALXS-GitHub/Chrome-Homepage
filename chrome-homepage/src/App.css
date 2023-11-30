@@ -1,4 +1,5 @@
 :root {
+  --background-image: url("./images/background.jpg");
   --left-panel-color: #CCCCCC;
   --left-panel-color-transparent: #CCCCCC66;
   --right-panel-color: #000000;
@@ -20,4 +21,9 @@
   --button-color: #FFFFFF;
   --button-background-color-hover: #0073ff;
   --settings-section-delimiter-color: #00000080;
+}
+
+body {
+  width: 100%;
+  height: 100%;
 }

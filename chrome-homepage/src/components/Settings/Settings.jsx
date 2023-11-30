@@ -2,12 +2,15 @@ import './Settings.css'
 import React from 'react'
 import { useState, useEffect } from 'react'
 
-import { SetDefaultLinks, DeleteAllLinks } from '../../manager'
+import { BackgroundContext } from '../../App'
+
+import { SetDefaultLinks, DeleteAllLinks, SetDefaultBackground, ChangeBackground, ChangeBackgroundSize } from '../../manager'
 import { LinkList, AddLinkBox, Button } from '../../components'
 
 const Settings = () => {
 
     const [addingLink, setAddingLink] = useState(false)
+    const { background } = React.useContext(BackgroundContext)
 
     const handleAddLink = (e) => {
         e.stopPropagation()
@@ -32,12 +35,9 @@ const Settings = () => {
             <div className="settings-container">
                 <h1 className="settings-container__title">Settings</h1>
                 <div className="settings-section">
-                    <div className="settings-section__item">
-                        <SetDefaultLinks />
-                        <DeleteAllLinks />
+                    <div className="settings-section__title">
+                        Links
                     </div>
-                </div>
-                <div className="settings-section">
                     <div className="settings-section__item">
                         <LinkList />
                     </div>
@@ -47,6 +47,17 @@ const Settings = () => {
                         ) : (
                             <Button onClick={handleAddLink} children={"Add link"} size={2} />
                         )}
+                    </div>
+                    <div className="settings-section__item">
+                        <SetDefaultLinks />
+                        <DeleteAllLinks />
+                    </div>
+                </div>
+                <div className="settings-section">
+                    <div className="settings-section__item">
+                        <SetDefaultBackground />
+                        <ChangeBackground />
+                        <ChangeBackgroundSize />
                     </div>
                 </div>
             </div>
