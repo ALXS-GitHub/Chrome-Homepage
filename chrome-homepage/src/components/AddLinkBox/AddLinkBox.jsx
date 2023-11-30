@@ -30,6 +30,13 @@ const AddLinkBox = () => {
         const file = imgRef.current.files[0];
         const url = urlRef.current.value;
         const reader = new FileReader();
+        if (!file) {
+            const link = { name, url, img: img || DefaultImage};
+            const newLinks = [...links, link];
+            setLinks(newLinks);
+            set('links', newLinks);
+            return;
+        }
         reader.onloadend = () => {
             const link = { name, url, img: img || DefaultImage};
             const newLinks = [...links, link];

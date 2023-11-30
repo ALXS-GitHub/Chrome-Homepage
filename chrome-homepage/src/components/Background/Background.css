@@ -1,7 +1,6 @@
 .background {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
     position: fixed;
     background-repeat: repeat;
     top: 0;
@@ -9,4 +8,15 @@
     z-index: -1;
     display: block;
     overflow-x: hidden;
+}
+
+.background {
+    opacity: 0;
+    animation: appear 1s forwards;
+}
+
+@keyframes background-appear {
+    to {
+        opacity: 1;
+    }
 }
