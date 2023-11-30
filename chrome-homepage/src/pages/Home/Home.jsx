@@ -19,7 +19,11 @@ const Home = () => {
 
     useEffect(() => {
         get('background').then(background => {
-            setBackground(background || DefaultBackground)
+            const defaultBackground = {
+                img: DefaultBackground,
+                size: 'cover'
+            }
+            setBackground(background || defaultBackground)
         })
     }, [setBackground])
 
