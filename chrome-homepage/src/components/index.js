@@ -6,6 +6,7 @@ import Button from './Button/Button';
 import LinkList from './LinkList/LinkList';
 import Background from './Background/Background';
 import Select from './Select/Select';
+import SearchHistory from './SearchHistory/SearchHistory';
 
 export {
     GoogleSearchBar,
@@ -15,5 +16,6 @@ export {
     Button,
     LinkList,
     Background,
-    Select
+    Select,
+    SearchHistory
 }

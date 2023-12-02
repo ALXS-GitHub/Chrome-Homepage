@@ -5,7 +5,7 @@
     background-color: var(--right-panel-color-transparent);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 var(--right-panel-side-padding);
     backdrop-filter: blur(var(--right-panel-blur));
@@ -26,4 +26,13 @@
     to {
         transform: translateX(0);
     }
+}
+
+.right-panel__search-history {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

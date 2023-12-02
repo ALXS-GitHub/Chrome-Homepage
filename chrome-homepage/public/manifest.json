@@ -13,7 +13,8 @@
   "permissions": [
     "activeTab",
     "storage",
-    "tab"
+    "tab",
+    "history"
   ],
   "icons": {
     "16": "logo388.png",
