@@ -1,29 +1,50 @@
 :root {
-  --background-image: url("./images/background.jpg");
-  --left-panel-color: #CCCCCC;
-  --left-panel-color-transparent: #CCCCCC66;
-  --right-panel-color: #000000;
-  --right-panel-color-transparent: #00000066;
-  --right-panel-width: 600px;
-  --right-panel-side-padding: 20px;
-  --left-panel-blur: 3px;
-  --right-panel-blur: 5px;
-  --google-search-bar-width: 80%;
-  --google-search-bar-color: #CCCCCC66;
-  --google-search-bar-color-hover: #CCCCCC88;
-  --link-box-width: 150px;
-  --link-box-color: #FFFFFF;
-  --settings-panel-width: var(--right-panel-width);
-  --settings-panel-side-padding: var(--right-panel-side-padding);
-  --settings-background-color: #FFFFFF;
-  --settings-color: #000000;
-  --button-background-color: linear-gradient(73deg, #4f4f4f, #a9a9a9);
-  --button-color: #FFFFFF;
-  --button-background-color-hover: #0073ff;
-  --settings-section-delimiter-color: #00000080;
+    --background-image: url("./images/background.jpg");
+    --left-panel-color: #cccccc;
+    --left-panel-color-transparent: #cccccc66;
+    --left-panel-color-transparent-no-blur: #cccccca0;
+    --right-panel-color: #000000;
+    --right-panel-color-transparent: #00000066;
+    --right-panel-color-transparent-no-blur: #000000a0;
+    --right-panel-width: 600px;
+    --right-panel-side-padding: 20px;
+    --left-panel-blur: 3px;
+    --right-panel-blur: 5px;
+    --google-search-bar-width: 80%;
+    --google-search-bar-color: #cccccc66;
+    --google-search-bar-color-hover: #cccccc88;
+    --link-box-width: 150px;
+    --link-box-color: #ffffff;
+    --settings-panel-width: var(--right-panel-width);
+    --settings-panel-side-padding: var(--right-panel-side-padding);
+    --settings-background-color: #ffffff;
+    --settings-color: #000000;
+    --button-background-color: linear-gradient(73deg, #4f4f4f, #a9a9a9);
+    --button-color: #ffffff;
+    --button-background-color-hover: #0073ff;
+    --settings-section-delimiter-color: #00000080;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff27;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888bd;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

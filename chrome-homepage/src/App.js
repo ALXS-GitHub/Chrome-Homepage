@@ -1,6 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./pages";
+import { Home, YouTube, GlobalSettings } from "./pages";
+
+import { Background } from "./components";
 
 import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
@@ -18,9 +20,14 @@ function App() {
     return (
         <HashRouter>
             <LinksContext.Provider value={{ links, setLinks }}>
-                <BackgroundContext.Provider value={{ background, setBackground }}>
+                <BackgroundContext.Provider
+                    value={{ background, setBackground }}
+                >
+                    <Background />
+                    <GlobalSettings />
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/YouTube" element={<YouTube />} />
                     </Routes>
                 </BackgroundContext.Provider>
             </LinksContext.Provider>

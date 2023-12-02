@@ -7,6 +7,7 @@ import LinkList from './LinkList/LinkList';
 import Background from './Background/Background';
 import Select from './Select/Select';
 import SearchHistory from './SearchHistory/SearchHistory';
+import PagesMenu from './PagesMenu/PagesMenu';
 
 export {
     GoogleSearchBar,
@@ -17,5 +18,6 @@ export {
     LinkList,
     Background,
     Select,
-    SearchHistory
+    SearchHistory,
+    PagesMenu
 }

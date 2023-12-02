@@ -1,0 +1,67 @@
+.pages-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pages-menu__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pages-menu__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--link-box-color);
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 4px 10px;
+}
+
+.pages-menu__item:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.pages-menu__item__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+/* mainly for the home logo */
+.pages-menu__item__icon * {
+    fill: rgba(0, 0, 0, 0.753);
+    width: 30px;
+    height: 30px;
+}
+
+.pages-menu__item__icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.pages-menu__item__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+}

@@ -2,13 +2,14 @@
     width: var(--right-panel-width);
     position: relative;
     height: 100%;
-    background-color: var(--right-panel-color-transparent);
+    background-color: var(--right-panel-color-transparent-no-blur);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 var(--right-panel-side-padding);
-    backdrop-filter: blur(var(--right-panel-blur));
+    /* backdrop-filter: blur(var(--right-panel-blur)); */
+    will-change: transform;
 }
 
 .right-panel__google-search-bar {
@@ -35,4 +36,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.right-panel__pages-menu {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
 }

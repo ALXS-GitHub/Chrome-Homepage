@@ -8,6 +8,7 @@
     z-index: -1;
     display: block;
     overflow-x: hidden;
+    will-change: opacity;
 }
 
 .background {

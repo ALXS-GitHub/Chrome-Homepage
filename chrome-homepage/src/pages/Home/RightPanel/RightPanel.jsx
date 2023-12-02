@@ -1,11 +1,14 @@
 import './RightPanel.css'
 import React from 'react'
 
-import { GoogleSearchBar, SearchHistory } from '../../../components'
+import { GoogleSearchBar, SearchHistory, PagesMenu } from '../../../components'
 
 const RightPanel = () => {
     return (
         <div className="right-panel">
+            <div className="right-panel__pages-menu">
+                <PagesMenu />
+            </div>
             <div className="right-panel__google-search-bar">
                 <GoogleSearchBar />
             </div>
