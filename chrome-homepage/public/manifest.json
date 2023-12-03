@@ -24,6 +24,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.youtube.com; object-src 'self'"
+  "background_color": "#ffffff"
 }

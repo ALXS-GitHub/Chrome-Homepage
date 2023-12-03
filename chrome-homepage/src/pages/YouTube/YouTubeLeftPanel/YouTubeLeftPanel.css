@@ -13,7 +13,7 @@
 }
 
 .youtube-left-panel__video {
-    width: 80%;
+    width: 70%;
     height: auto;
     aspect-ratio: 16 / 9;
     display: flex;
@@ -26,6 +26,49 @@
     -webkit-overflow-scrolling: touch;
     position: absolute;
     top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.youtube-left-panel__video__thumbnail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0;
+    position: absolute;
+    cursor: pointer;
+}
+
+.youtube-left-panel__video__thumbnail img:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0;
+    position: absolute;
+    object-fit: cover;
+}
+
+.youtube-left-panel__video__logo {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.youtube-left-panel__video__thumbnail:hover .youtube-left-panel__video__logo {
+    opacity: 1;
 }
