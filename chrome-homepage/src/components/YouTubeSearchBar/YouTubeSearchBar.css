@@ -1,0 +1,30 @@
+.youtube-search-bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.youtube-search-bar form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube-search-bar__input {
+    width: var(--youtube-search-bar-width);
+    height: 40px;
+    border: none;
+    padding: 0 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    outline: none;
+    background-color: var(--youtube-search-bar-color);
+    color:white;
+}
+
+.youtube-search-bar__input:hover {
+    background-color: var(--youtube-search-bar-color-hover);
+}

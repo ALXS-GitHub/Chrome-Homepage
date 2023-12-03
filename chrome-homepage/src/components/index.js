@@ -8,6 +8,8 @@ import Background from './Background/Background';
 import Select from './Select/Select';
 import SearchHistory from './SearchHistory/SearchHistory';
 import PagesMenu from './PagesMenu/PagesMenu';
+import SearchHistoryYouTube from './SearchHistoryYouTube/SearchHistoryYouTube';
+import YouTubeSearchBar from './YouTubeSearchBar/YouTubeSearchBar';
 
 export {
     GoogleSearchBar,
@@ -19,5 +21,7 @@ export {
     Background,
     Select,
     SearchHistory,
-    PagesMenu
+    PagesMenu,
+    SearchHistoryYouTube,
+    YouTubeSearchBar
 }

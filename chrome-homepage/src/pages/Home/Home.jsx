@@ -4,7 +4,8 @@ import React from 'react'
 
 
 import LeftPanel from './LeftPanel/LeftPanel'
-import RightPanel from './RightPanel/RightPanel'
+import RightPanel from '../../components/RightPanel/RightPanel'
+import HomeRightPanel from './HomeRightPanel/HomeRightPanel'
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     return (
         <div className="home">
             <LeftPanel />
-            <RightPanel />  
+            <RightPanel content={<HomeRightPanel />} /> 
         </div>
     )
 }

@@ -1,47 +1,74 @@
+/* global chrome */
 import './YouTubeLeftPanel.css'
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { get } from 'idb-keyval'
+import { useState, useEffect, useRef } from 'react'
+import { get, set } from 'idb-keyval'
 import axios from 'axios'
+
+import DefaultHistoryYouTube from '../../../documents/default_history_youtube.json'
 
 const YouTubeLeftPanel = () => {
 
-    const [YTAPIKey, setYTAPIKey] = useState(null)
     const [video, setVideo] = useState(null)
+    const playerRef = useRef()
+
+    const kMillisecondsPerWeek = 1000 * 60 * 60 * 24 * 7;
+    const kOneWeekAgo = new Date().getTime() - kMillisecondsPerWeek;
+
+    const getMostRecentVideo = (searches) => {
+        return searches[0];
+    }
 
     useEffect(() => {
-        get('youtube-api-key').then((val) => {
-            setYTAPIKey(val);
-            console.log('YouTube API key', val)
+        if (chrome.history) {
+            chrome.history
+                .search({
+                    text: '',
+                    startTime: kOneWeekAgo,
+                    maxResults: 200
+                }).then(historyItems => {
+                    const youtubeSearch = historyItems.filter(item => item.url.includes("https://www.youtube.com/watch"));
+                    const latestSearch = getMostRecentVideo(DefaultHistoryYouTube);
+                    setVideo(latestSearch);
+                    console.log(latestSearch)
+                })
+        } else {
+            const latestSearch = getMostRecentVideo(DefaultHistoryYouTube);
+            setVideo(latestSearch);
+            console.log(latestSearch)
+        }
+    }, [])
 
-            // Get the latest video from the "Watch Later" playlist
-            const response = axios.get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=PL8ZQ0tYlxX4HKf6MV1H2dy4JKsxmLLflQ&key=${val}`)
-            .then((response) => {
-                if (response.data.items.length === 0) return
-                console.log(response.data)
-                setVideo(response.data)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-        });
-    }, []);
+    useEffect(() => {
+        // Function to create a new YouTube player
+        const createPlayer = () => {
+            console.log("player created")
+            if (!video) return;
+            new window.YT.Player(playerRef.current, {
+                videoId: video.url.replace('https://www.youtube.com/watch?v=', ''),
+                events: {
+                    'onReady': (event) => {
+                        // ! change this parameter to autoplay
+                        // Play the video when the player is ready
+                        // event.target.playVideo();
+                    }
+                }
+            });
+        };
+
+        // Create a new YouTube player when the API is ready
+        if (window.YT && window.YT.Player) {
+            // The YouTube Player API is already loaded, create the player immediately
+            createPlayer();
+        } else {
+            // The YouTube Player API is not loaded yet, set the onYouTubeIframeAPIReady function
+            window.onYouTubeIframeAPIReady = createPlayer;
+        }
+    }, [video, setVideo]);
     
     return (
         <div className="youtube-left-panel">
-            {video ? (
-                <iframe
-                    className="youtube-left-panel__video"
-                    width="560"
-                    height="315"
-                    src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`}
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            ) : null}
-            
+            <div ref={playerRef} className="youtube-left-panel__video"></div>
         </div>
     )
 }

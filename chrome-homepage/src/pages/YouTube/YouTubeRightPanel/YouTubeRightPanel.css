@@ -1,0 +1,34 @@
+.youtube-right-panel {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube-right-panel__google-search-bar {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+.youtube-right-panel__search-history {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.youtube-right-panel__pages-menu {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}

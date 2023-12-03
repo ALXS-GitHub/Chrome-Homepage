@@ -13,6 +13,9 @@
     --google-search-bar-width: 80%;
     --google-search-bar-color: #cccccc66;
     --google-search-bar-color-hover: #cccccc88;
+    --youtube-search-bar-width: 80%;
+    --youtube-search-bar-color: #cccccc66;
+    --youtube-search-bar-color-hover: #cccccc88;
     --link-box-width: 150px;
     --link-box-color: #ffffff;
     --settings-panel-width: var(--right-panel-width);
