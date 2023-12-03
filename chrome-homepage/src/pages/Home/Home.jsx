@@ -12,8 +12,7 @@ const Home = () => {
     return (
         <div className="home">
             <LeftPanel />
-            <RightPanel />
-            
+            <RightPanel />  
         </div>
     )
 }
