@@ -21,7 +21,15 @@ For Chrome, go to `chrome://extensions` and load unpacked extension, then select
 
 ![](images/2023-12-04-14-03-53.png)
 
-On the homepage, you can two panels, the left panel is the one where you can add your favorite links, and the right panel is the one where you can make a google search, see your latest searches and navigate between the main homepage and the YouTube homepage.
+On the homepage, you have two panels, the left panel is the one where you can add your favorite links, and the right panel is the one where you can make a google search, see your latest searches and navigate between the main homepage and the YouTube homepage using the buttons on top of this panel.
+
+### YouTube Homepage
+
+![](images/2023-12-04-14-32-32.png)
+
+As you can see, the YouTube homepage is a bit different from the main homepage, you have the thumbnail of the latest video you have watched on the left panel, and you have a YouTube search bar on the right panel, as well as your YouTube latest searches. You can also navigate between the main homepage and the YouTube homepage using the buttons on top of the right panel.
+
+Note that for the left panel to work, you need to set your YouTube API key in the [settings](#youtube).
 
 ### Settings
 

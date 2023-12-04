@@ -75,6 +75,9 @@ const YouTubeLeftPanel = () => {
 
             {video && videoSnippet ? (
                 <div className="youtube-left-panel__video">
+                    <div className="youtube-left-panel__video__title">
+                        {videoSnippet.title}
+                    </div>
                     <div className="youtube-left-panel__video__thumbnail" onClick={onClick}>
                         <img src={videoSnippet.thumbnails.maxres ? videoSnippet.thumbnails.maxres.url : videoSnippet.thumbnails.high.url} alt="thumbnail"/>
                         <img src={YouTubeLogo} alt="logo" className="youtube-left-panel__video__logo" />
