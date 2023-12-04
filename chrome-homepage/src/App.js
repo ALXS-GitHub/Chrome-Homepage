@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Home, YouTube, GlobalSettings } from "./pages";
 
-
 import { Background } from "./components";
 
 import { HashRouter, Route, Routes } from "react-router-dom";
