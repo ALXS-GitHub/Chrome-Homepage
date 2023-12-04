@@ -2,7 +2,6 @@ import './LinkList.css'
 import React from 'react'
 import { set, get } from 'idb-keyval' // to use IndexedDB more easily
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 
 import { LinksContext } from '../../App'
@@ -99,6 +98,47 @@ const LinkList = () => {
         setShowConfirmationDialog(true)
     }
 
+    // µ Drag and drop
+
+    const dragItem = useRef(null)
+    const dragOverItem = useRef(null)
+
+    const onDragStart = (e, name) => {
+        e.dataTransfer.setData("name", name)
+        dragItem.current = name
+        console.log("drag start", name)
+    }
+
+    const onDragEnter = (e, name) => {
+        e.preventDefault()
+        dragOverItem.current = name
+        console.log("drag enter", name)
+    }
+
+    const onDragEnd = (e) => {
+        e.preventDefault()
+        console.log("drag end")
+    }
+
+    const onDragOver = (e) => {
+        e.preventDefault()
+    }
+
+    const onDrop = (e) => {
+        e.preventDefault()
+        const name1 = dragItem.current
+        const name2 = dragOverItem.current
+        const newLinks = [...links]
+        const index1 = newLinks.findIndex(link => link.name === name1)
+        const index2 = newLinks.findIndex(link => link.name === name2)
+        const temp = newLinks[index1]
+        newLinks[index1] = newLinks[index2]
+        newLinks[index2] = temp
+        setLinks(newLinks)
+        set('links', newLinks)
+        console.log("drop")
+    }
+
     // & document click
     useEffect(() => {
         const handleDocumentClick = (e) => {
@@ -114,7 +154,7 @@ const LinkList = () => {
     }, []);
 
     return (
-        <div className="linklist">
+        <div className="linklist" onDrop={onDrop} onDragOver={onDragOver}>
 
             {/* confirmation dialog for delete */}
             {showConfirmationDialog ? (
@@ -127,7 +167,7 @@ const LinkList = () => {
             }
 
             {links.map((link, index) => (
-                <div className="linklist__item" key={index}>
+                <div className="linklist__item" draggable key={index} onDragStart={(e) => onDragStart(e,link.name)} onDragEnd={onDragEnd} onDragEnter={(e) => onDragEnter(e,link.name)}>
                     {modified === link.name ? (
                         <div id="modif-item" className="linklist__item__prop">
                             <img className="image-modif-hover" src={imgModif || link.img} alt={link.name} onClick={imgOnClick} />

@@ -43,6 +43,8 @@ There are multiple sections in the settings :
 
 The first one is the one where you can add your favorite links, you can add a link by clicking on the `Add Link` button, you can modify a link by clicking on the `Edit` button (to confirm, click back on the `Edit` button), and you can delete a link by clicking on the `Delete` button.
 
+You can also change the order of the links by dragging and dropping them.
+
 You Also have the possibility to delete all the links by clicking on the `Delete all links` button, but you can also set the default links (GitHub, YouTube, ChatGPT, Twitch, Gmail, MonkeyType and Google Drive) by clicking on the `Set default links` button.
 
 ![](images/2023-12-04-14-08-25.png)

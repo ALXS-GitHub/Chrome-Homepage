@@ -17,6 +17,12 @@
     align-items: center;
     margin-bottom: 20px;
     position: relative;
+    cursor: grab;
+}
+
+.linklist__item:active {
+    cursor: grabbing;
+    opacity: 1;
 }
 
 .linklist__item__prop {
