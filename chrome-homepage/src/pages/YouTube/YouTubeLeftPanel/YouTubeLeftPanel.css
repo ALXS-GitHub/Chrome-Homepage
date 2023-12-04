@@ -30,6 +30,19 @@
     transform: translate(-50%, -50%);
 }
 
+.youtube-left-panel__video {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 150px));
+    animation: appear-video 2.5s forwards;
+}
+
+@keyframes appear-video {
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .youtube-left-panel__video__thumbnail {
     width: 100%;
     height: 100%;
@@ -52,6 +65,7 @@
     padding: 0 0;
     position: absolute;
     object-fit: cover;
+    border-radius: 40px;
 }
 
 .youtube-left-panel__video__logo {

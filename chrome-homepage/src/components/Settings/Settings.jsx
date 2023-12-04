@@ -54,6 +54,9 @@ const Settings = () => {
                     </div>
                 </div>
                 <div className="settings-section">
+                    <div className="settings-section__title">
+                        Background
+                    </div>
                     <div className="settings-section__item">
                         <SetDefaultBackground />
                         <ChangeBackground />
