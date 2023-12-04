@@ -45,6 +45,8 @@ The first one is the one where you can add your favorite links, you can add a li
 
 You can also change the order of the links by dragging and dropping them.
 
+![](images/links_drag.gif)
+
 You Also have the possibility to delete all the links by clicking on the `Delete all links` button, but you can also set the default links (GitHub, YouTube, ChatGPT, Twitch, Gmail, MonkeyType and Google Drive) by clicking on the `Set default links` button.
 
 ![](images/2023-12-04-14-08-25.png)
