@@ -131,9 +131,19 @@ const LinkList = () => {
         const newLinks = [...links]
         const index1 = newLinks.findIndex(link => link.name === name1)
         const index2 = newLinks.findIndex(link => link.name === name2)
-        const temp = newLinks[index1]
-        newLinks[index1] = newLinks[index2]
-        newLinks[index2] = temp
+        if (index1 < index2) {
+            for (let i = index1; i < index2; i++) {
+                const temp = newLinks[i]
+                newLinks[i] = newLinks[i + 1]
+                newLinks[i + 1] = temp
+            }
+        } else {
+            for (let i = index1; i > index2; i--) {
+                const temp = newLinks[i]
+                newLinks[i] = newLinks[i - 1]
+                newLinks[i - 1] = temp
+            }
+        }
         setLinks(newLinks)
         set('links', newLinks)
         console.log("drop")

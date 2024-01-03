@@ -29,7 +29,7 @@ const SearchHistory = () => {
                 .search({
                     text: '',
                     startTime: kOneWeekAgo,
-                    maxResults: 200
+                    maxResults: 500
                 }).then(historyItems => {
                     const googleSearches = historyItems.filter(item => item.url.includes("https://www.google.com/search"));
                     const latestSearches = getTenMostRecentSearches(googleSearches);

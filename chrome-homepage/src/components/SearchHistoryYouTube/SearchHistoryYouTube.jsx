@@ -29,7 +29,7 @@ const SearchHistoryYouTube = () => {
                 .search({
                     text: '',
                     startTime: kOneWeekAgo,
-                    maxResults: 200
+                    maxResults: 500
                 }).then(historyItems => {
                     const youtubeSearches = historyItems.filter(item => item.url.includes("https://www.youtube.com/results"));
                     const latestSearches = getTenMostRecentSearches(youtubeSearches);
