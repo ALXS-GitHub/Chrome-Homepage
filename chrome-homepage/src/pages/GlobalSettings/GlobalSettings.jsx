@@ -26,7 +26,7 @@ const GlobalSettings = () => {
             >
                 <Settings />
             </CSSTransition>
-            <div className="home__settings-button" onClick={toggleSettings}>
+            <div className="home__settings-button link" onClick={toggleSettings}>
                 <CSSTransition
                     in={settingsOpen}
                     timeout={3000}

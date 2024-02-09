@@ -3,7 +3,7 @@ import React from 'react'
 
 const Button = ({ children, onClick, size }) => {
     return (
-        <div className={`button-${size}`} onClick={onClick}>
+        <div className={`button-${size} link`} onClick={onClick}>
             {children}
         </div>
     )

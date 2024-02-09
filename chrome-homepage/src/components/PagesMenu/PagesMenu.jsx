@@ -12,12 +12,12 @@ const PagesMenu = () => {
     return (
         <div className="pages-menu">
             <div className="pages-menu__list">
-                <div className="pages-menu__item" onClick={() => navigate('/')} >
+                <div className="pages-menu__item link" onClick={() => navigate('/')} >
                     <div className="pages-menu__item__icon">
                         <HomeLogo />
                     </div>
                 </div>
-                <div className="pages-menu__item" onClick={() => navigate('/YouTube')}>
+                <div className="pages-menu__item link" onClick={() => navigate('/YouTube')}>
                     <div className="pages-menu__item__icon">
                         <img src={YouTubeLogo} alt="YouTube" />
                     </div>

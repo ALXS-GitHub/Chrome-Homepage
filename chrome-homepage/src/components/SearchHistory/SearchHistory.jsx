@@ -50,7 +50,7 @@ const SearchHistory = () => {
         <div className="search-history">
             <div className="search-history__list">
                 {history.map((search, index) => (
-                    <div className="search-history__list-item" key={index} onClick={(e) => handleItemClick(e,search)}>
+                    <div className="search-history__list-item link" key={index} onClick={(e) => handleItemClick(e,search)}>
                         <div className="search-history__list-item-text">{search.title.replace(' - Recherche Google', '')}</div>
                         <div className="search-history__list-item-icon">
                             <SearchIcon />

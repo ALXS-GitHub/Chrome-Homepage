@@ -177,7 +177,7 @@ const LinkList = () => {
             }
 
             {links.map((link, index) => (
-                <div className="linklist__item" draggable key={index} onDragStart={(e) => onDragStart(e,link.name)} onDragEnd={onDragEnd} onDragEnter={(e) => onDragEnter(e,link.name)}>
+                <div className="linklist__item link" draggable key={index} onDragStart={(e) => onDragStart(e,link.name)} onDragEnd={onDragEnd} onDragEnter={(e) => onDragEnter(e,link.name)}>
                     {modified === link.name ? (
                         <div id="modif-item" className="linklist__item__prop">
                             <img className="image-modif-hover" src={imgModif || link.img} alt={link.name} onClick={imgOnClick} />

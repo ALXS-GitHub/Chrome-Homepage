@@ -67,7 +67,7 @@ const AddLinkBox = () => {
         <div className="add-link-box">
             <form className="add-link-box__item" onSubmit={handleUpload}>
                 <div className="add-link-box__item__prop">
-                    <img className="image-modif-hover" src={img || DefaultImage} alt="Default" onClick={imgOnClick} />
+                    <img className="image-modif-hover link" src={img || DefaultImage} alt="Default" onClick={imgOnClick} />
                     <input type="text" ref={nameRef} placeholder="Name" />
                     <input type="text" ref={urlRef} placeholder="Url" />
                     <input type="file" ref={imgRef} style={{ display: 'none' }} onChange={handleImgChange} />

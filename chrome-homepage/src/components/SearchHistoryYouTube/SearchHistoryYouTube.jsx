@@ -51,7 +51,7 @@ const SearchHistoryYouTube = () => {
         <div className="search-history-youtube">
             <div className="search-history-youtube__list">
                 {history.map((search, index) => (
-                    <div className="search-history-youtube__list-item" key={index} onClick={(e) => handleItemClick(e, search)}>
+                    <div className="search-history-youtube__list-item link" key={index} onClick={(e) => handleItemClick(e, search)}>
                         <div className="search-history-youtube__list-item-text">{search.title.replace(' - YouTube', '').replace(/^\(\d+\)\s*/, '')}</div>
                         <div className="search-history-youtube__list-item-icon">
                             <SearchIcon />

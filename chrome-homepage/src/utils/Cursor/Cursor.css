@@ -1,0 +1,48 @@
+.cursor__inner,
+.cursor__outer, .cursor__outer-outer, .cursor__outer-inner {
+    z-index: 9999;
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.cursor__inner {
+    width: 10px;
+    height: 10px;
+    background: var(--cursor-color);
+}
+
+.cursor__outer {
+    width: 40px;
+    height: 40px;
+    /* border: 2px solid var(--cursor-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursor__outer-outer {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--cursor-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.cursor__outer-inner {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--cursor-color-opacity);
+    transform: translate(-50%, -50%) scale(0.01);
+    transition: transform 0.3s ease-out;
+}

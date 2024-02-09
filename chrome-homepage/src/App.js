@@ -3,6 +3,7 @@ import "./App.css";
 import { Home, YouTube, GlobalSettings } from "./pages";
 
 import { Background } from "./components";
+import { Cursor } from "./utils";
 
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { useState, createContext } from "react";
@@ -20,6 +21,7 @@ function App() {
         <HashRouter>
             <LinksContext.Provider value={{ links, setLinks }}>
                 <BackgroundContext.Provider value={{ background, setBackground }}>
+                    <Cursor />
                     <Background />
                     <GlobalSettings />
                     <Routes>

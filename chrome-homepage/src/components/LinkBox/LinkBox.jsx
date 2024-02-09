@@ -10,7 +10,7 @@ const LinkBox = (props) => {
     }
 
     return (
-        <div className="link-box" onClick={handleClick}>
+        <div className="link-box link" onClick={handleClick}>
                 <div className="link-box__icon">
                     <img src={link.img} alt={link.name} />
                 </div>
