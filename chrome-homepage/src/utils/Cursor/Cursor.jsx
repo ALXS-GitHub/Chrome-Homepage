@@ -41,7 +41,8 @@ const Cursor = () => {
             gsap.killTweensOf(cursorOuterOuter.current);
             gsap.to(cursorOuterOuter.current, {
                 scale: 0.8,
-                duration: 0.1,
+                opacity: 0.8,
+                duration: 0.05,
             });
         };
 
@@ -49,7 +50,8 @@ const Cursor = () => {
             gsap.killTweensOf(cursorOuterOuter.current);
             gsap.to(cursorOuterOuter.current, {
                 scale: 1,
-                duration: 0.1,
+                opacity: 1,
+                duration: 0.05,
             });
         };
 
@@ -64,7 +66,7 @@ const Cursor = () => {
             });
             gsap.to(cursorOuterInner.current, {
                 scale: 1,
-                duration: 0.1,
+                duration: 0.05,
             });
         };
         
@@ -79,7 +81,7 @@ const Cursor = () => {
             });
             gsap.to(cursorOuterInner.current, {
                 scale: 0.01,
-                duration: 0.1,
+                duration: 0.05,
             });
         };
 
