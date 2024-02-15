@@ -1,3 +1,3 @@
-import { getUserRepos } from "./github";
+import { getUserRepos, getLatestCommits } from "./github";
 
-export { getUserRepos };
+export { getUserRepos, getLatestCommits };

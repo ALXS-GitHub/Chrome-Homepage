@@ -17,6 +17,8 @@
     --youtube-search-bar-color: #cccccc66;
     --youtube-search-bar-color-hover: #cccccc88;
     --link-box-width: 150px;
+    --repo-box-width: 350px;
+    --repo-box-height: 150px;
     --link-box-color: #ffffff;
     --settings-panel-width: var(--right-panel-width);
     --settings-panel-side-padding: var(--right-panel-side-padding);

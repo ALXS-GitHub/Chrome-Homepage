@@ -10,6 +10,8 @@ import SearchHistory from './SearchHistory/SearchHistory';
 import PagesMenu from './PagesMenu/PagesMenu';
 import SearchHistoryYouTube from './SearchHistoryYouTube/SearchHistoryYouTube';
 import YouTubeSearchBar from './YouTubeSearchBar/YouTubeSearchBar';
+import RepoBox from './RepoBox/RepoBox';
+import CommitHistoryGitHub from './CommitHistoryGitHub/CommitHistoryGitHub';
 
 export {
     GoogleSearchBar,
@@ -23,5 +25,7 @@ export {
     SearchHistory,
     PagesMenu,
     SearchHistoryYouTube,
-    YouTubeSearchBar
+    YouTubeSearchBar,
+    RepoBox,
+    CommitHistoryGitHub
 }

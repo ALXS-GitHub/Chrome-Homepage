@@ -12,5 +12,15 @@
     will-change: transform;
 }
 
+.github-left-panel__container {
+    width: 840px;
+    max-height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
 
 
