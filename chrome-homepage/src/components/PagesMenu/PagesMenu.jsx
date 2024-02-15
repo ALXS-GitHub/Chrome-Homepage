@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { ReactComponent as HomeLogo } from '../../icons/house-solid.svg'
 import YouTubeLogo from '../../images/YouTube.png'
+import GitHubLogo from '../../images/GitHub.png'
 
 const PagesMenu = () => {
 
@@ -22,6 +23,12 @@ const PagesMenu = () => {
                         <img src={YouTubeLogo} alt="YouTube" />
                     </div>
                     <div className="pages-menu__item__text">YouTube</div>
+                </div>
+                <div className="pages-menu__item link" onClick={() => navigate('/GitHub')}>
+                    <div className="pages-menu__item__icon">
+                        <img src={GitHubLogo} alt="GitHub" />
+                    </div>
+                    <div className="pages-menu__item__text">GitHub</div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,58 @@
+.search-history-github {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.search-history-github__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+@media (max-height: 700px) {
+    .search-history-github__list {
+        height: 60vh;
+        overflow-y: scroll;
+    }
+}
+
+.search-history-github__list-item {
+    width: var(--google-search-bar-width);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    margin: 5px 0;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color:var(--google-search-bar-color-hover);
+    flex-shrink: 0;
+    position:relative;
+}
+
+.search-history-github__list-item-text {
+    font-size: 16px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+}
+
+.search-history-github__list-item-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: white;
+}

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 import { BackgroundContext } from '../../App'
 
-import { SetDefaultLinks, DeleteAllLinks, SetDefaultBackground, ChangeBackground, ChangeBackgroundSize, YouTubeAPI } from '../../manager'
+import { SetDefaultLinks, DeleteAllLinks, SetDefaultBackground, ChangeBackground, ChangeBackgroundSize, YouTubeAPI, GitHubAPI } from '../../manager'
 import { LinkList, AddLinkBox, Button } from '../../components'
 
 const Settings = () => {
@@ -69,6 +69,14 @@ const Settings = () => {
                     </div>
                     <div className="settings-section__item">
                         <YouTubeAPI />
+                    </div>
+                </div>
+                <div className="settings-section">
+                    <div className="settings-section__title">
+                        GitHub
+                    </div>
+                    <div className="settings-section__item">
+                        <GitHubAPI />
                     </div>
                 </div>
             </div>

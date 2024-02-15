@@ -1,0 +1,16 @@
+.github-left-panel {
+    flex-basis: 0;
+    flex-grow: 1;
+    height: 100%;
+    background-color: var(--left-panel-color-transparent-no-blur);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    will-change: transform;
+}
+
+
+

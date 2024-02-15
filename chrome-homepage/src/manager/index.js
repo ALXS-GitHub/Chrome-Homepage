@@ -5,6 +5,7 @@ import ChangeBackground from "./ChangeBackground/ChangeBackground";
 import SetDefaultBackground from "./SetDefaultBackground/SetDefaultBackground";
 import ChangeBackgroundSize from "./ChangeBackground/ChangeBackgroundSize/ChangeBackgroundSize";
 import YouTubeAPI from "./YouTubeAPI/YouTubeAPI";
+import GitHubAPI from "./GitHubAPI/GitHubAPI";
 
 export {
     SetDefaultLinks,
@@ -13,5 +14,6 @@ export {
     ChangeBackground,
     SetDefaultBackground,
     ChangeBackgroundSize,
-    YouTubeAPI
+    YouTubeAPI,
+    GitHubAPI
 }

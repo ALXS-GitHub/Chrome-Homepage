@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Home, YouTube, GlobalSettings } from "./pages";
+import { Home, YouTube, GlobalSettings, GitHub } from "./pages";
 
 import { Background } from "./components";
 import { Cursor } from "./utils";
@@ -27,6 +27,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/YouTube" element={<YouTube />} />
+                        <Route path="GitHub" element={<GitHub />} />
                     </Routes>
                 </BackgroundContext.Provider>
             </LinksContext.Provider>
