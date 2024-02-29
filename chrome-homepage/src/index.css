@@ -22,3 +22,27 @@ body {
   --cursor-color: rgb(101, 105, 118);
   --cursor-color-opacity: rgba(101, 105, 118, 0.5);
 }
+
+
+/* pointer */
+
+body,
+a,
+button,
+input,
+input:hover,
+label,
+input[type="file"] {
+    cursor: auto;
+}
+
+/* let the default cursor in the dev console */
+body:not(.devtools-open),
+body:not(.devtools-open) a,
+body:not(.devtools-open) button,
+body:not(.devtools-open) input,
+body:not(.devtools-open) input:hover,
+body:not(.devtools-open) label,
+body:not(.devtools-open) input[type="file"] {
+    cursor: none !important;
+}

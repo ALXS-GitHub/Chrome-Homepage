@@ -33,7 +33,7 @@
     padding: 10px;
     margin: 5px 0;
     border-radius: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     background-color: #f5f5f5; /* adjust as needed */
     flex-shrink: 0;
     position:relative;

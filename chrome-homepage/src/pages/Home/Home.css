@@ -17,7 +17,7 @@
     bottom: 20px;
     right: 20px;
     z-index: 20;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .home__settings-button img {

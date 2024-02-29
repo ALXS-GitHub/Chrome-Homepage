@@ -34,7 +34,7 @@
     padding: 0 25px;
     margin: 5px 0;
     border-radius: 30px;
-    cursor: pointer;
+    cursor: none;
     background-color:var(--google-search-bar-color-hover);
     flex-shrink: 0;
     position:relative;

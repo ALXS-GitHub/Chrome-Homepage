@@ -17,7 +17,7 @@
     align-items: center;
     margin-bottom: 20px;
     position: relative;
-    cursor: grab;
+    cursor: none;
 }
 
 .linklist__item:active {
@@ -86,6 +86,6 @@
     padding: 0;
     border: none;
     background: none;
-    cursor: pointer;
+    /* cursor: pointer; */
     outline: none;
 }

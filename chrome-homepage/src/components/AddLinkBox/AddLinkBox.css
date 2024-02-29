@@ -75,7 +75,7 @@
     background-color: transparent;
     border: none;
     outline: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .image-modif-hover:hover {
