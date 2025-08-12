@@ -15,6 +15,9 @@ cd chrome-homepage && npm run build
 
 For Chrome, go to `chrome://extensions` and load unpacked extension, then select the `build` folder.
 
+For Firefox you first need to zip the build folder (please make sure that the zip you create contains the content of the build folder directly and not a build folder that contains the content). If you want, you can use the python script `tools/zip_build.py` in order to do it properly.
+Then go to `Extensions > Manage Extensions`, then on the gear icon, select load the zip you just built.
+
 ## Usage
 
 ### Homepage
