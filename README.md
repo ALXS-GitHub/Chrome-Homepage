@@ -34,6 +34,12 @@ As you can see, the YouTube homepage is a bit different from the main homepage, 
 
 Note that for the left panel to work, you need to set your YouTube API key in the [settings](#youtube).
 
+### GitHub Homepage
+
+The GitHub homepage lists your repositories on the left panel (most recently updated first, with visibility, description, language and stars), and your latest pushes (repository, commit message, author and date) on the right panel. Clicking a repository or a push opens it on GitHub. You can navigate to it using the buttons on top of the right panel.
+
+Note that for this page to work, you need to set your GitHub username and API key in the [settings](#github).
+
 ### Settings
 
 You can access the settings by clicking on the settings icon on the bottom right corner of the homepage.
@@ -68,9 +74,13 @@ This section is important to make the YouTube homepage work (especially for the 
 
 Once you have set your YouTube API key, you can still remove it by clicking on the `Delete YT API key` button.
 
+#### GitHub
+
+This section is needed for the GitHub homepage: enter your GitHub username and a GitHub API key (personal access token). You can remove them with the `Delete GH user` and `Delete GH API key` buttons.
+
 ## Notes
 
-This extension is still in development, so there are some bugs, and some new features are going to be implemented with time. This readme can be missing some features do to some future updates.
+This extension is no longer actively developed (on pause since 2024), so there are some known bugs and unfinished features.
 
 ## Sources 
 
