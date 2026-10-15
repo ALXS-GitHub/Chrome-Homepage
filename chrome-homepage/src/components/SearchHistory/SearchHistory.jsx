@@ -1,11 +1,11 @@
-/* global chrome */
+/* global browser */
 
 import './SearchHistory.css'
 import React, { useState, useEffect } from 'react'
 
 import DefaultHistory from '../../documents/default_history.json'
 import { ReactComponent as SearchIcon } from '../../icons/magnifying-glass.svg'
-
+import { getBrowserHistory } from '../../utils/browser'
 
 const SearchHistory = () => {
 
@@ -23,9 +23,12 @@ const SearchHistory = () => {
         return uniqueSearches.slice(0, 10);
     }
 
+
+
     useEffect(() => {
-        if (chrome.history) {
-            chrome.history
+        const historyAPI = getBrowserHistory();
+        if (historyAPI) {
+            historyAPI
                 .search({
                     text: '',
                     startTime: kOneWeekAgo,

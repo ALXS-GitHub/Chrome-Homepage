@@ -1,4 +1,4 @@
-/* global chrome */
+/* global browser */
 import './YouTubeLeftPanel.css'
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import DefaultHistoryYouTube from '../../../documents/default_history_youtube.json'
 import YouTubeLogo from '../../../images/YouTube.png'
+import { getBrowserHistory } from '../../../utils/browser'
 
 const YouTubeLeftPanel = () => {
 
@@ -45,8 +46,10 @@ const YouTubeLeftPanel = () => {
     }
 
     useEffect(() => {
-        if (chrome.history) {
-            chrome.history
+        const historyAPI = getBrowserHistory();
+        
+        if (historyAPI) {
+            historyAPI
                 .search({
                     text: '',
                     startTime: kOneWeekAgo,
@@ -57,6 +60,12 @@ const YouTubeLeftPanel = () => {
                     setVideo(latestSearch);
                     console.log(latestSearch)
                 })
+                .catch(error => {
+                    console.warn('History API not available:', error);
+                    const latestSearch = getMostRecentVideo(DefaultHistoryYouTube);
+                    setVideo(latestSearch);
+                    console.log(latestSearch)
+                });
         } else {
             const latestSearch = getMostRecentVideo(DefaultHistoryYouTube);
             setVideo(latestSearch);

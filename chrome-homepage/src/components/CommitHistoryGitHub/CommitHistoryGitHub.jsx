@@ -1,5 +1,3 @@
-/* global chrome */
-
 import './CommitHistoryGitHub.css'
 import React, { useState, useEffect } from 'react'
 import { get, set } from 'idb-keyval'
